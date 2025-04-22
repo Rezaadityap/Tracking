@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website - Tracking dan Monitoring Uji Kendaraan</title>
+    <!-- Tailwindcss -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+    <!-- Aos -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+  </head>
+  <body>
+    <nav
+      class="px-6 sm:px-12 py-3 flex justify-between items-center fixed top-0 w-full bg-primary z-50">
+      <div class="flex items-center">
+        <img
+          src="img/Logo Kementerian Perhubungan Indonesia (Kemenhub)  (PNG-480p) - FileVector69 1.png"
+          alt="Logo Dishub"
+          class="h-10" />
+        <h2 class="text-white text-sm uppercase font-medium ml-3">
+          Kementerian Perhubungan <br />
+          Republik Indonesia
+        </h2>
+      </div>
+      <!-- Menu Utama -->
+      <div id="menu" class="hidden md:flex space-x-8">
+        <a
+          href="index.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Home</a
+        >
+        <a
+          href="informasi.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Informasi</a
+        >
+        <a
+          href="tentangkami.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Tentang Kami</a
+        >
+      </div>
+      <div id="menu-extra" class="hidden md:flex items-center space-x-4">
+        <span id="tanggal" class="text-white text-sm"></span>
+        <a href="login.html">
+          <i
+            class="fas fa-user text-white text-lg transition duration-300 hover:text-secondary"></i>
+        </a>
+      </div>
+      <!-- Tombol Hamburger menu -->
+      <button
+        id="menu-btn"
+        class="md:hidden text-white text-2xl focus:outline-none cursor-pointer">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <!-- Sidebar Menu -->
+    <div
+      id="sidebar-menu"
+      class="fixed top-0 right-0 w-64 h-full bg-primary shadow-lg transform translate-x-full transition-transform duration-300 z-100">
+      <div class="flex justify-between items-center p-6 border-b border-white">
+        <h2 class="text-white text-lg font-semibold">Menu</h2>
+        <button
+          id="close-menu"
+          class="text-white text-2xl focus:outline-none cursor-pointer">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="flex flex-col p-6 space-y-4">
+        <a
+          href="index.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Home</a
+        >
+        <a
+          href="informasi.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Informasi</a
+        >
+        <a
+          href="tentangkami.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Tentang Kami</a
+        >
+        <a href="login.html">
+          <i
+            class="fas fa-user text-white text-lg transition duration-300 hover:text-secondary"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Section Pertama Mulai -->
+    <section class="bg-accent py-24 px-6 md:px-12 mt-6 z-20" id="home">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <!-- Tentang BPLJSKB -->
+        <div
+          class="space-y-4 text-justify text-white"
+          data-aos="fade-up"
+          data-aos-duration="2000">
+          <p>
+            Balai PLJSKJB resmi didirikan pada tanggal 26 Maret 1988 berdasarkan
+            Keputusan Menteri Nomor 7 Tahun 1988 dan beralamat di Jalan Raya
+            Setu, Cibuntu, Kec. Cibitung, Kabupaten Bekasi, Provinsi Jawa Barat
+            17520, Indonesia. Sejak saat itu BPLJSKB juga resmi beroperasi untuk
+            melakukan pengujian tipe kendaraan bermotor.
+          </p>
+          <p>
+            Balai Pengujian Laik Jalan dan Sertifikasi Kendaraan Bermotor
+            melakukan pengujian bagian kendaraan bermotor, peralatan
+            keselamatan, uji lapangan serta pemeriksaan konstruksi. Saat ini
+            BPLJSKB sudah memiliki sejumlah fasilitas peralatan uji modern untuk
+            bisa mengimbangi kemajuan teknologi kendaraan bermotor dan beberapa
+            alat uji sudah memiliki sertifikat ISO dan terakreditasi ISO/IEC
+            17025:2017.
+          </p>
+        </div>
+
+        <!-- Gambar -->
+        <div
+          class="flex justify-center"
+          data-aos="fade-up"
+          data-aos-duration="2000">
+          <img
+            src="img/bpljskb.png"
+            alt="Gedung BPLJSKB"
+            class="rounded-xl border-4 border-blue-300 max-w-full h-auto" />
+        </div>
+      </div>
+      <div
+        class="sm:px-6 max-w-5xl mx-auto mt-12"
+        data-aos="zoom-in"
+        data-aos-duration="2000">
+        <div
+          class="bg-secondary text-white text-center py-3 px-4 rounded-md font-bold text-sm md:text-lg">
+          Balai Pengujian Laik Jalan dan Sertifikasi Kendaraan Bermotor
+          (BPLJSKB) adalah UPT di bidang pengujian tipe kendaraan bermotor di
+          lingkungan Kementerian Perhubungan yang berada di bawah pengawasan dan
+          bertanggung jawab kepada Dirjen Hubdat
+        </div>
+      </div>
+    </section>
+    <!-- Section Pertama Selesai -->
+
+    <!-- Section Kedua Mulai -->
+    <section class="bg-white py-24 z-50 -mt-12 rounded-t-[50px]">
+      <div
+        class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8"
+        data-aos="fade-up"
+        data-aos-duration="2000">
+        <!-- BPLJSKB Saat ini -->
+        <div class="space-y-4 text-justify text-black px-6">
+          <p>
+            Saat ini BPLJSKB telah resmi menjadi Instansi Pemerintah yang
+            menerapkan Pola Pengelolaan Keuangan Badan Layanan Umum (BLU) pada
+            tanggal 23 September 2022 sesuai dengan amanah Menteri Keuangan pada
+            KMK No. 392 Tahun 2022 tentang Penetapan Balai Pengujian Laik Jalan
+            dan Sertifikasi Kendaraan Bermotor pada Kementerian Perhubungan
+            sebagai Instansi Pemerintah yang menerapkan Pola Pengelolaan
+            Keuangan Badan Layanan Umum.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-justify text-black px-6 items-start">
+          <p class="font-bold">Tugas BPLJSKB</p>
+          <p>
+            Melaksanakan uji tipe kendaraan bermotor dan penyiapan bahan
+            sertifikasi uji tipe kendaraan bermotor
+          </p>
+        </div>
+      </div>
+      <!-- VISI MISI -->
+      <div
+        class="flex justify-center items-center py-10 px-4"
+        data-aos="zoom-in"
+        data-aos-duration="2000">
+        <div
+          class="bg-accent rounded-xl p-6 w-full max-w-5xl text-white grid md:grid-cols-2 gap-6">
+          <!-- Visi -->
+          <div class="flex items-start gap-4">
+            <div class="bg-white p-2 rounded-md">
+              <i class="fas fa-bullseye text-3xl text-accent"></i>
+            </div>
+            <div>
+              <h3 class="font-bold">Visi</h3>
+              <p>
+                Menuju terselenggaranya lalu lintas dan angkutan jalan yang
+                nyaman, lancar, dan selamat serta ramah lingkungan
+              </p>
+            </div>
+          </div>
+
+          <!-- Misi -->
+          <div class="flex items-start gap-4">
+            <div class="bg-white p-2 rounded-md">
+              <i class="fas fa-globe text-3xl text-accent"></i>
+            </div>
+            <div>
+              <h3 class="font-bold">Misi</h3>
+              <p>
+                Memastikan semua tipe kendaraan bermotor yang akan dirakit,
+                diimpor, diproduksi, dan dipasarkan memenuhi persyaratan teknis
+                dan laik jalan
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fungsi BPLJSKB -->
+      <div
+        class="max-w-5xl mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="2000">
+        <h3 class="font-bold text-xl text-center">Fungsi BPLJSKB</h3>
+        <div class="grid md:grid-cols-2 gap-2 mt-4">
+          <div class="space-y-4 text-justify px-12">
+            <ul class="list-disc md:text-md marker:text-secondary">
+              <div class="mb-2">
+                <li class="font-bold">Perencanaan</li>
+                <p>
+                  Penyusunan rencana, program, anggaran, rencana strategis
+                  bisnis, dan rencana bisnis anggaran.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Pengujian Fisik</li>
+                <p>Penyiapan bahan dan pelaksanaan uji tipe.</p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">
+                  Pengujian Prototipe Kendaraan Bermotor
+                </li>
+                <p>
+                  Penyiapan bahan dan pelaksanaan kerjasama uji pengembangan
+                  prototipe kendaraan bermotor.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Keselamatan dan Kesehatan Kerja (K3)</li>
+                <p>
+                  Pengawasan dan pelaksanaan keselamatan dan kesehatan kerja di
+                  lingkungan Balai Pengujian Laik Jalan dan Sertifikasi
+                  Kendaraan Bermotor.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Sarana dan Prasarana</li>
+                <p>
+                  Pelaksanaan penyusunan kebutuhan, pemeliharaan, dan penilaian
+                  kinerja fasilitas peralatan pengujian serta sarana dan
+                  prasarana penunjang lainnya.
+                </p>
+              </div>
+              <div class="md:mb-2">
+                <li class="font-bold">Kalibrasi Alat</li>
+                <p>Pelaksanaan kalibrasi sarana dan prasarana uji tipe.</p>
+              </div>
+            </ul>
+          </div>
+
+          <div class="space-y-4 text-justify px-12 items-start">
+            <ul class="list-disc md:text-md marker:text-secondary">
+              <div class="mb-2">
+                <li class="font-bold">
+                  Pengembangan Teknologi Kendaraan Bermotor
+                </li>
+                <p>
+                  Pelaksanaan analisis isu aktual perkembangan kendaraan
+                  bermotor dan penyelenggaraan sistem informasi pengujian tipe
+                  kendaraan bermotor.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Metode Pengujian Tipe</li>
+                <p>Pelaksanaan standarisasi metode pengujian tipe.</p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Pemeriksaan Karoseri</li>
+                <p>
+                  Pelaksanaan pemeriksaan kesesuaian fisik rancang bangun
+                  kendaraan bermotor di wilayah DKI Jakarta.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Pemasaran</li>
+                <p>Pelaksanaan pengembangan usaha, pemasaran dan kerjasama.</p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Pemeriksaan Internal</li>
+                <p>Pelaksanaan pemeriksaan intern.</p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Administrasi dan Ketatausahaan</li>
+                <p>
+                  Pelaksanaan urusan tata usaha, rumah tangga, sumber daya
+                  manusia, keuangan, hukum, hubungan masyarakat, organisasi,
+                  reformasi birokrasi, perlengkapan, barang milik negara, data
+                  dan informasi.
+                </p>
+              </div>
+              <div class="mb-2">
+                <li class="font-bold">Evaluasi dan Pelaporan</li>
+                <p>Pelaksanaan evaluasi dan pelaporan.</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Kedua Selesai -->
+    <!-- Footer Mulai -->
+    <footer class="bg-primary pt-24 pb-16 z-50 -mt-12 rounded-t-[50px]">
+      <div
+        class="container mx-auto px-12 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h2 class="text-white font-semibold uppercase text-xl md:text-2xl">
+            bpljskb
+          </h2>
+          <p class="text-white text-sm mt-6">
+            Balai Pengujian Laik Jalan dan Sertifikasi Kendaraan Bermotor
+            (BPLJSKB) adalah UPT di bidang pengujian tipe kendaraan bermotor di
+            lingkungan Kementrian Perhubungan yang berada di bawah pengawasan
+            dan bertanggung jawab kepada Dirjen Hubdat
+          </p>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-xl md:text-2xl">Kontak</h2>
+          <p class="flex items-center gap-2 text-white text-sm mt-6">
+            <i class="fab fa-instagram"></i> @balaipjskb
+          </p>
+          <p class="flex items-center gap-2 mt-2 text-white text-sm">
+            <i class="fas fa-envelope"></i> bpljskb@kemenhub.go.id
+          </p>
+          <p class="flex items-center gap-2 mt-2 text-white text-sm">
+            <i class="fas fa-phone"></i> 021-8253552
+          </p>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-xl md:text-2xl">Alamat</h2>
+          <p class="text-white text-sm mt-6">
+            Jl. Raya Setu No.Km 3.5, Gandamekar, Kec. Cikarang Bar., Bekasi,
+            Jawa Barat
+          </p>
+        </div>
+      </div>
+      <div class="px-12 text-sm mt-12 text-white">
+        &copy; Copyright BPLJSKB 2025
+      </div>
+    </footer>
+    <button
+      id="backToTop"
+      class="fixed bottom-5 right-5 bg-primary text-white h-10 w-10 rounded-full shadow-xl hidden transition-all duration-300 cursor-pointer">
+      <i class="fas fa-arrow-up text-lg"></i>
+    </button>
+    <!-- Footer Selesai -->
+    <script src="src/js/script.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

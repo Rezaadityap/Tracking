@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website - Tracking dan Monitoring Uji Kendaraan</title>
+    <!-- Tailwindcss -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <nav
+      class="px-6 sm:px-12 py-3 flex justify-between items-center fixed top-0 w-full bg-primary z-50">
+      <div class="flex items-center">
+        <img
+          src="img/Logo Kementerian Perhubungan Indonesia (Kemenhub)  (PNG-480p) - FileVector69 1.png"
+          alt="Logo Dishub"
+          class="h-10" />
+        <h2 class="text-white text-sm uppercase font-medium ml-3">
+          Kementerian Perhubungan <br />
+          Republik Indonesia
+        </h2>
+      </div>
+      <!-- Menu Utama -->
+      <div id="menu" class="hidden md:flex space-x-8">
+        <a
+          href="index.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Home</a
+        >
+        <a
+          href="informasi.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Informasi</a
+        >
+        <a
+          href="tentangkami.html"
+          class="nav-link text-white text-base font-medium px-3 py-2 border-2 border-transparent rounded-lg transition duration-300 hover:bg-secondary hover:border-white"
+          >Tentang Kami</a
+        >
+      </div>
+      <div id="menu-extra" class="hidden md:flex items-center space-x-4">
+        <span id="tanggal" class="text-white text-sm"></span>
+        <a href="login.html">
+          <i
+            class="fas fa-user text-white text-lg transition duration-300 hover:text-secondary"></i>
+        </a>
+      </div>
+      <!-- Tombol Hamburger menu -->
+      <button
+        id="menu-btn"
+        class="md:hidden text-white text-2xl focus:outline-none cursor-pointer">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+    <!-- Sidebar Menu -->
+    <div
+      id="sidebar-menu"
+      class="fixed top-0 right-0 w-64 h-full bg-primary shadow-lg transform translate-x-full transition-transform duration-300 z-100">
+      <div class="flex justify-between items-center p-6 border-b border-white">
+        <h2 class="text-white text-lg font-semibold">Menu</h2>
+        <button
+          id="close-menu"
+          class="text-white text-2xl focus:outline-none cursor-pointer">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="flex flex-col p-6 space-y-4">
+        <a
+          href="index.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Home</a
+        >
+        <a
+          href="informasi.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Informasi</a
+        >
+        <a
+          href="tentangkami.html"
+          class="text-white text-base font-medium hover:text-secondary"
+          >Tentang Kami</a
+        >
+        <a href="login.html">
+          <i
+            class="fas fa-user text-white text-lg transition duration-300 hover:text-secondary"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Section Pertama Mulai -->
+    <section class="bg-accent py-24 px-6 md:px-12 mt-6 z-20" id="home">
+      <a
+        href="index.html"
+        class="px-4 py-2 bg-secondary text-white rounded-lg text-sm font-medium hover:bg-hover-sc transition border-2 border-white cursor-pointer">
+        <i class="fas fa-arrow-left"></i>
+        Kembali
+      </a>
+      <div class="flex items-center justify-center my-6">
+        <div
+          class="bg-primary text-white rounded-2xl p-6 w-full max-w-xl flex flex-col md:flex-row gap-12 items-center md:items-start mx-auto">
+          <!-- Gambar Kendaraan -->
+          <div class="bg-white rounded-xl p-4 mx-auto md:mx-0">
+            <img
+              src="img/car.png"
+              alt="Car Icon"
+              class="w-28 h-28 object-contain" />
+          </div>
+
+          <!-- Informasi Spesifikasi -->
+          <div class="text-center md:text-left">
+            <h2 class="text-xl font-bold mb-2">Spesifikasi Kendaraan</h2>
+            <p>
+              <span class="text-sm">Merk Kendaraan</span><br />
+              <span class="font-bold">Nissan</span>
+            </p>
+            <p class="mt-2">
+              <span class="text-sm">Model/ Tipe/ Varian</span><br />
+              <span class="font-bold">New Terra VL 2.5 (4x4) A/T</span>
+            </p>
+            <p class="mt-2">
+              <span class="text-sm">Jenis Kendaraan</span><br />
+              <span class="font-bold">Mobil Penumpang Bukan Sedan</span>
+            </p>
+            <p class="mt-2">
+              <span class="text-sm">Bahan Bakar</span><br />
+              <span class="font-bold">Solar</span>
+            </p>
+            <p class="mt-2">
+              <span class="text-sm">Jenis Pelayanan</span><br />
+              <span class="font-bold">Pra Uji Tipe</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Pertama Selesai -->
+
+    <!-- Section Kedua Mulai -->
+    <section class="bg-white py-24 z-50 -mt-12 rounded-t-[50px]">
+      <div class="mx-auto max-w-3xl">
+        <div class="space-y-6 p-6">
+          <!-- Lacak Pengujian -->
+          <div class="bg-secondary text-white rounded-2xl p-6">
+            <h2 class="text-sm font-semibold mb-4">
+              Uji kendaraan selesai pada <strong>21 Maret 2025</strong> jam
+              <strong>09:49</strong>
+            </h2>
+            <div class="flex items-center justify-between gap-2">
+              <!-- Step 1 -->
+              <div class="flex-1 flex flex-col items-center">
+                <div class="bg-white p-2 rounded-xl md:rounded-lg">
+                  <img
+                    src="img/Lacak/mekanik.png"
+                    class="w-10 mb-2"
+                    alt="Sedang Diuji" />
+                </div>
+                <span class="text-xs text-center">Sedang Diuji</span>
+              </div>
+              <div class="h-1 w-3 md:w-6 bg-white rounded-full"></div>
+
+              <!-- Step 2 -->
+              <div class="flex-1 flex flex-col items-center">
+                <div class="bg-white p-2 rounded-xl md:rounded-lg">
+                  <img
+                    src="img/Lacak/list-car.png"
+                    class="w-10 mb-2"
+                    alt="Selesai" />
+                </div>
+                <span class="text-xs text-center">Kendaraan Selesai</span>
+              </div>
+              <div class="h-1 w-3 md:w-6 bg-white rounded-full"></div>
+
+              <!-- Step 3 -->
+              <div class="flex-1 flex flex-col items-center">
+                <div class="bg-white p-2 rounded-xl md:rounded-lg">
+                  <img
+                    src="img/Lacak/online-survey.png"
+                    class="w-10 mb-2"
+                    alt="Kuisioner" />
+                </div>
+                <span class="text-xs text-center">Pengisian kuesioner</span>
+              </div>
+              <div class="h-1 w-3 md:w-6 bg-white rounded-full"></div>
+
+              <!-- Step 4 -->
+              <div class="flex-1 flex flex-col items-center">
+                <div class="bg-white p-2 rounded-xl md:rounded-lg">
+                  <img
+                    src="img/Lacak/kuncimobil.png"
+                    class="w-10 mb-2"
+                    alt="Penyerahan" />
+                </div>
+                <span class="text-xs text-center">Penyerahan Kendaraan</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail & Riwayat -->
+          <div class="bg-accent text-white rounded-2xl p-6 space-y-4">
+            <!-- Info Kendaraan -->
+            <div class="flex flex-wrap justify-between text-xs gap-y-2">
+              <div>
+                <span class="block opacity-70">Nomor SPU</span>
+                <span class="font-semibold">XXX/1/xxx</span>
+              </div>
+              <div>
+                <span class="block opacity-70">NIP Penguji</span>
+                <span class="font-semibold">xxxxxxxx</span>
+              </div>
+              <div>
+                <span class="block opacity-70">Nama Penguji</span>
+                <span class="font-semibold">Penguji 1</span>
+              </div>
+              <div>
+                <span class="block opacity-70">Jabatan Penguji</span>
+                <span class="font-semibold">xxxxxxxx</span>
+              </div>
+            </div>
+
+            <hr class="border-white/30" />
+
+            <!-- Riwayat Status -->
+            <div class="space-y-4 text-sm relative">
+              <!-- Item 1 -->
+              <div class="flex items-start gap-4 relative">
+                <div class="text-right text-xs whitespace-nowrap">
+                  <div>09:49:17</div>
+                  <div>21 Maret 2025</div>
+                </div>
+                <div class="relative flex flex-col items-center">
+                  <div
+                    class="w-3 h-3 rounded-full bg-green-400 z-10 relative"></div>
+                  <div class="absolute top-3 w-0.5 h-[102px] bg-white"></div>
+                </div>
+                <div>
+                  Uji kendaraan anda telah selesai<br />
+                  <span class="text-yellow-300 font-medium">Peringatan:</span>
+                  Kendaraan telah selesai diuji, silahkan mengisi kuisioner.
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex items-start gap-4 relative">
+                <div class="text-right text-xs whitespace-nowrap">
+                  <div>09:49:17</div>
+                  <div>21 Maret 2025</div>
+                </div>
+                <div class="relative flex flex-col items-center">
+                  <div class="w-3 h-3 rounded-full bg-white relative"></div>
+                  <div
+                    class="absolute top-3 w-0.5 h-[45px] md:h-[40px] bg-white"></div>
+                </div>
+                <div>Kendaraan sedang tahap uji mesin</div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="flex items-start gap-4 relative">
+                <div class="text-right text-xs whitespace-nowrap">
+                  <div>09:49:17</div>
+                  <div>21 Maret 2025</div>
+                </div>
+                <div class="relative flex flex-col items-center">
+                  <div class="w-3 h-3 rounded-full bg-white z-10"></div>
+                </div>
+                <div>Kendaraan sedang tahap uji</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Kedua Selesai -->
+    <!-- Footer Mulai -->
+    <footer class="bg-primary pt-24 pb-16 z-50 -mt-12 rounded-t-[50px]">
+      <div
+        class="container mx-auto px-12 md:px-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h2 class="text-white font-semibold uppercase text-xl md:text-2xl">
+            bpljskb
+          </h2>
+          <p class="text-white text-sm mt-6">
+            Balai Pengujian Laik Jalan dan Sertifikasi Kendaraan Bermotor
+            (BPLJSKB) adalah UPT di bidang pengujian tipe kendaraan bermotor di
+            lingkungan Kementrian Perhubungan yang berada di bawah pengawasan
+            dan bertanggung jawab kepada Dirjen Hubdat
+          </p>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-xl md:text-2xl">Kontak</h2>
+          <p class="flex items-center gap-2 text-white text-sm mt-6">
+            <i class="fab fa-instagram"></i> @balaipjskb
+          </p>
+          <p class="flex items-center gap-2 mt-2 text-white text-sm">
+            <i class="fas fa-envelope"></i> bpljskb@kemenhub.go.id
+          </p>
+          <p class="flex items-center gap-2 mt-2 text-white text-sm">
+            <i class="fas fa-phone"></i> 021-8253552
+          </p>
+        </div>
+        <div>
+          <h2 class="text-white font-semibold text-xl md:text-2xl">Alamat</h2>
+          <p class="text-white text-sm mt-6">
+            Jl. Raya Setu No.Km 3.5, Gandamekar, Kec. Cikarang Bar., Bekasi,
+            Jawa Barat
+          </p>
+        </div>
+      </div>
+      <div class="px-12 text-sm mt-12 text-white">
+        &copy; Copyright BPLJSKB 2025
+      </div>
+    </footer>
+    <button
+      id="backToTop"
+      class="fixed bottom-5 right-5 bg-primary text-white h-10 w-10 rounded-full shadow-xl hidden transition-all duration-300 cursor-pointer">
+      <i class="fas fa-arrow-up text-lg"></i>
+    </button>
+    <!-- Footer Selesai -->
+    <script src="src/js/script.js"></script>
+  </body>
+</html>

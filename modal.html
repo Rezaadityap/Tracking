@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modal Kuesioner</title>
+    <!-- Tailwindcss -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <!-- Tombol untuk membuka modal -->
+    <button
+      onclick="openModal()"
+      class="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+      Tampilkan Kuesioner
+    </button>
+
+    <!-- Modal -->
+    <div
+      id="kuesionerModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 px-6 md:px-0">
+      <div
+        class="bg-white rounded-2xl p-6 max-w-md w-full text-center shadow-lg">
+        <!-- Gambar -->
+        <img
+          src="img/kuesioner.png"
+          alt="Form Kuesioner"
+          class="mx-auto mb-4 w-40" />
+
+        <!-- Teks -->
+        <h2 class="text-xl font-semibold mb-2">Form Kuesioner</h2>
+        <p class="text-gray-600 mb-4">
+          Silahkan klik dibawah untuk mengisi kuesioner!
+        </p>
+
+        <!-- Tombol Kuesioner -->
+        <a
+          href="https://skm.dephub.go.id/ly/ztqYs3ci"
+          target="_blank"
+          class="inline-block bg-secondary text-white px-6 py-2 rounded-lg font-medium hover:bg-hover-sc transition duration-300 ease-in-out">
+          Kuesioner
+        </a>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      function openModal() {
+        document.getElementById("kuesionerModal").classList.remove("hidden");
+        document.getElementById("kuesionerModal").classList.add("flex");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Monitoring Uji Kendaraan</title>
+    <!-- Tailwindcss -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+    <!-- Google Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body class="h-screen d-flex justify-center items-center bg-primary">
+    <!-- Navbar -->
+    <nav
+      class="bg-transparent px-6 sm:px-28 py-3 flex justify-between items-center fixed top-0 w-full z-50">
+      <div class="flex items-center">
+        <img
+          src="img/Logo Kementerian Perhubungan Indonesia (Kemenhub)  (PNG-480p) - FileVector69 1.png"
+          alt="Logo Dishub"
+          class="h-10 text-white" />
+        <h2 class="text-white text-sm uppercase font-medium ml-3">
+          Kementerian Perhubungan <br />
+          Republik Indonesia
+        </h2>
+      </div>
+      <a
+        href="index.html"
+        class="px-4 py-2 bg-secondary text-white rounded-lg text-sm font-medium hover:bg-hover-sc transition border-2 border-white cursor-pointer">
+        Kembali
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </nav>
+    <div class="flex w-full h-screen pt-12">
+      <div
+        class="flex flex-1 flex-col justify-center items-center px-6 md:px-10">
+        <div class="w-full max-w-md bg-accent p-10 rounded-xl shadow-md">
+          <h1 class="text-left text-3xl text-text-primary font-bold mb-6">
+            Masuk
+          </h1>
+          <form action="#" class="w-full max-w-sm" id="myForm">
+            <div
+              class="relative flex items-center bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-4">
+              <i class="fas fa-user text-gray-400 mr-2"></i>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                class="w-full bg-transparent focus:outline-none text-sm" />
+            </div>
+            <div
+              class="relative flex items-center bg-gray-100 border border-gray-300 rounded-lg px-4 py-2 mb-2">
+              <i class="fas fa-lock text-gray-400 mr-2"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                class="w-full bg-transparent focus:outline-none text-sm" />
+              <i
+                class="fas fa-eye-slash text-gray-400 cursor-pointer ml-2"
+                id="toggle-password"
+                onclick="lihatPassword()"></i>
+            </div>
+            <div class="float-end mb-3">
+              <a
+                href="lupaPassword.html"
+                class="text-white underline hover:no-underline"
+                >Lupa Password?</a
+              >
+            </div>
+            <div class="mb-4 w-full">
+              <div class="flex items-center justify-center w-full max-w-md">
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LeG7gUrAAAAADiIHxaFOvjFpDLnEfGclrUrHwGB"></div>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-secondary cursor-pointer text-white py-2 rounded-lg text-lg font-semibold border-2 border-white transition hover:bg-hover-sc">
+              Masuk
+            </button>
+          </form>
+          <p class="text-white text-sm mt-8">&copy; Copyright BPLJSKB 2025</p>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-1 justify-center items-center">
+        <img
+          src="img/cuate.png"
+          alt="Gambar Login Admin"
+          class="w-4/5 max-h-2/3 rounded-lg object-contain" />
+      </div>
+    </div>
+  </body>
+</html>

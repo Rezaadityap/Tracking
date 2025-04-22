@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website - Tracking dan Monitoring Uji Kendaraan</title>
+    <!-- Tailwindcss -->
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="bg-primary px-6 sm:px-24 py-3 flex justify-between items-center fixed top-0 w-full z-50">
+      <a
+        href="lupaPassword.html"
+        class="px-4 py-2 bg-secondary text-white rounded-lg text-sm font-medium hover:bg-hover-sc transition border-2 border-white cursor-pointer">
+        <i class="fas fa-arrow-left"></i>
+        Kembali
+      </a>
+    </nav>
+    <section class="bg-accent py-24 flex justify-center items-center h-screen">
+      <div class="w-full max-w-sm sm:max-w-md p-8">
+        <h2 class="text-white text-center font-bold text-lg sm:text-3xl">
+          Periksa email anda
+        </h2>
+        <p class="text-white text-xs text-center my-4">
+          Kami telah mengirimkan kode terverifikasi dari 5 digit telah dikirim
+          sekarang ke <span class="font-bold">email@gmail.com</span>
+        </p>
+        <form action="#">
+          <div class="flex flex-row justify-center max-w-md space-x-2">
+            <input
+              type="text"
+              name="text"
+              class="w-16 h-12 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary mb-4 bg-white text-center" />
+            <input
+              type="text"
+              name="text"
+              class="w-16 h-12 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary mb-4 bg-white text-center" />
+            <input
+              type="text"
+              name="text"
+              class="w-16 h-12 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary mb-4 bg-white text-center" />
+            <input
+              type="text"
+              name="text"
+              class="w-16 h-12 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary mb-4 bg-white text-center" />
+            <input
+              type="text"
+              name="text"
+              class="w-16 h-12 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary mb-4 bg-white text-center" />
+          </div>
+          <p class="text-white text-xs text-center my-4">
+            Batas Waktu
+            <span class="font-bold text-[#FFB999] underline">03:12</span>
+          </p>
+          <button
+            class="w-full px-3 py-2 bg-secondary text-white rounded-lg text-sm font-medium hover:bg-hover-sc transition border-2 border-white cursor-pointer">
+            Kirim
+          </button>
+
+          <button
+            class="mt-4 w-full px-3 py-2 bg-transparent text-white rounded-lg text-sm font-medium hover:bg-secondary transition border-2 border-white cursor-pointer">
+            Kirim Ulang
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
